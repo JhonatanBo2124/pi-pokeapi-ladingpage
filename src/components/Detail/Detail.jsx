@@ -15,7 +15,7 @@ const Detail = () => {
     let navigate = useNavigate()
 
     useEffect(() => {
-        axios(`https://pokeapi.co/api/v2/pokemon/${id}`).then(({data}) => {
+        axios(`https://pi-pokeapi-backend-production.up.railway.app/pokemons/${id}`).then(({data}) => {
             setPokemon(data);
         })
     }, [id])
