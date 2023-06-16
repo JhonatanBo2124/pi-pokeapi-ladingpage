@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:wght@300;400&display=swap');
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
+.container img {
+    height: 40px;
+    width: 100px;
+    border-right: 25px;
+}
+.container a img {
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+}
+.container > img:hover {
+    filter: drop-shadow(2px 2px 8px white);
+    cursor: pointer;
+}
+.container ul li a {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+.container ul li a:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+.container div input {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    height: 20px;
+    width: 80%;
+    /* border-radius: 20px; */
+    /* background-color: rgb(60, 68, 77); */
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+    padding: 5px;
+    margin-left: 15px;
+}
+.container div a img {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 30px;
+    filter: invert();
+}
+.container div {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+}
+.ordenamientos select {
+    border: none;
+    background-color: rgb(49, 48, 48);
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+.visible select {
+    border: none;
+    background-color: rgb(49, 48, 48);
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 0 20px;
+}
+.menu {
+    display: none;
+    height: 30px;
+    width: 30px;
+    margin-right: 30px;
+}
+
+@media (max-width: 1000px) {
+    .menu{
+        display: flex;
+    }
+    .ordenamientos {
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        top: 50px;
+        background-color: black;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .visible {
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        top: 50px;
+        z-index: 10;
+        background-color: black;
+        transition: all .5s ease;
+    }
+    .visible select {       
+        margin: 20px 15px;
+    }
+    .ordenamientos select {
+        margin: 20px 15px;
+    }
+}

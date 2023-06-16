@@ -1,0 +1,29 @@
+.container {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    opacity: 0.3;
+}
+.container:hover {
+    opacity: 1;
+}
+.container img {
+    height: 45px;
+    cursor: pointer;
+    margin: 10px;
+}
+.container input {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 22px;
+    text-align: center;
+}
+.container img:hover {
+    transform: scale(1.1);
+    /* filter: invert(); */
+}

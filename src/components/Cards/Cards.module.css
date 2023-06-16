@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 50px;
+}
+.add {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+}
+.add img {
+    filter: drop-shadow(2px 2px 2px black);
+    height: 60px;
+    opacity: 0.7;
+}
+.add img:hover {
+    transform: scale(1.2);
+    transition-duration: 300ms;
+    opacity: 1;
+}
+.back > img {
+    position: fixed;
+    top: 70px;
+    left: 10px;
+    height: 55px;
+    margin: 10px;
+    filter: drop-shadow(2px 2px 5px black);
+}
+.load {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media (max-width: 500px){
+    .back > img {
+        height: 40px;
+    }
+}

@@ -1,0 +1,10 @@
+:root {
+  background: url('snorlax.jpg') no-repeat center fixed;
+  background-color: white;
+  background-size: cover;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  /* justify-content: center;
+  align-items: center; */
+}
+
