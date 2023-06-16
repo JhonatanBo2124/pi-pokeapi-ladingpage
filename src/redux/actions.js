@@ -34,7 +34,8 @@ export const loadPokemons = () => {
             api.push(newPokemon)
             })
         })
-        const dataBase = await axios('http://localhost:3001/pokemons/').then(({data}) => data)
+        // const dataBase = await axios('http://localhost:3001/pokemons/').then(({data}) => data)
+        const dataBase = await axios('https://pi-pokeapi-backend-production.up.railway.app/pokemons/').then(({data}) => data)
         dispatch({
             type: LOADPOKEMONS,
             payload: {api, dataBase}
