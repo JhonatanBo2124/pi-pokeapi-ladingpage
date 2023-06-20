@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import style from './Home.module.css'
-import boton from '../../../public/pokeball.png'
 import titulo from '../../../public/pokemon-logo-black-transparent.png'
 import html from '../../../public/html.png'
 import css from '../../../public/css.png'

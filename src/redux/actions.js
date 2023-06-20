@@ -57,7 +57,7 @@ export const orderCards = (order) => {
 export const searchCard = (param) => {
     return async(dispatch) => {
         try {
-            const findPokemon = await axios(`https://pokeapi.co/api/v2/pokemon/${param}`).then(({data}) => {
+            const findPokemon = await axios(`https://pokeapi.co/api/v2/pokemon/${param.toLowerCase()}`).then(({data}) => {
                 const { id, name, height, weight, sprites, stats, types } = data
                     let arr = [];
                     types.forEach(element => {
