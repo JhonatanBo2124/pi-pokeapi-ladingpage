@@ -3,11 +3,7 @@ import style from './Detail.module.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import atras from '../../../public/back.png'
-// import PropTypes from 'prop-types'
 
-// const pokemon = await axios('http://localhost:3001/pokemons/634').then(({data}) => data)
-// const { id, name, image, hp, attack, defense, speed, height, weight } = pokemon
-// const atributes = [ hp, attack, defense, speed]
 const Detail = () => {
 
     const { id } = useParams()
@@ -15,7 +11,7 @@ const Detail = () => {
     let navigate = useNavigate()
 
     useEffect(() => {
-        axios(`https://pi-pokeapi-backend-production.up.railway.app/pokemons/${id}`).then(({data}) => {
+        axios(`https://pokeapi-back-c1an.onrender.com/pokemons/${id}`).then(({data}) => {
             setPokemon(data);
         })
     }, [id])

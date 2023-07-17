@@ -35,7 +35,7 @@ export const loadPokemons = () => {
             })
         })
         // const dataBase = await axios('http://localhost:3001/pokemons/').then(({data}) => data)
-        const dataBase = await axios('https://pi-pokeapi-backend-production.up.railway.app/pokemons/').then(({data}) => data)
+        const dataBase = await axios('https://pokeapi-back-c1an.onrender.com/pokemons/').then(({data}) => data)
         dispatch({
             type: LOADPOKEMONS,
             payload: {api, dataBase}
@@ -93,10 +93,11 @@ export const allPokemons = () => {
         type: ALL
     }
 }
-export const create = (pokemon) => {
+export const create = async(pokemonData) => {
+    await axios.post(`https://pokeapi-back-c1an.onrender.com/pokemons/create`, pokemonData).catch(error => alert(error.message))
     return {
         type: CREATE,
-        payload: pokemon
+        payload: pokemonData
     }
 }
 export const attack = (ataque) => {

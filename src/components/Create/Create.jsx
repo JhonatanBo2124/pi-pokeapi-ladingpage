@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import style from './Create.module.css'
-import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { allPokemons, create } from '../../redux/actions'
@@ -18,7 +17,7 @@ const Create = () => {
     const datosCompletos = info.id && info.name && info.image && info.hp
     && info.attack && info.defense && info.speed && info.height && info.weight && info.types ? true : false;
 
-    const onCreate = async(event) => {
+    const onCreate = (event) => {
         event.preventDefault()
         if(datosCompletos){
             const pokemonData = {
@@ -33,7 +32,6 @@ const Create = () => {
                 weight: Number(info.weight),
                 types: info.types
             }
-            await axios.post(`http://localhost:3001/pokemons/create`, pokemonData).catch(error => alert(error.message))
             dispatch(create(pokemonData))
             dispatch(allPokemons())
             navigate(`/home/detail/${pokemonData.id}`)

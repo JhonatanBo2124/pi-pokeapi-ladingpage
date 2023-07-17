@@ -14,7 +14,7 @@ function App() {
   let { pathname } = useLocation()
 
   let [ pagina, setPagina ] = useState(1)
-    let [ porPagina ] = useState(12)
+  let [ porPagina ] = useState(12)
 
   return (
     <>
